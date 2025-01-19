@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service DictionaryService {
+  rpc ProcessWord (WordRequest) returns (WordResponse);
+}
+
+message WordRequest {
+  string word = 1;
+}
+
+message WordResponse {
+  string message = 1;
+  repeated WordEntry entries = 2;
+}
+
+message WordEntry {
+  string word = 1;
+  int32 count = 2;
+}
