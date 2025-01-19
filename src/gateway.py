@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import grpc
 import dictionary_pb2
 import dictionary_pb2_grpc
 
 app = Flask(__name__)
+
+CORS(app, origins=["http://localhost:5173"])
 
 GRPC_SERVER_ADDRESS = 'localhost:50051'
 
