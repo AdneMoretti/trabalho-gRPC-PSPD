@@ -28,7 +28,7 @@ def add_word():
     except grpc.RpcError as e:
         return jsonify({'error': str(e)}), 500
 
-@app.route('/get-dictionary', methods=['GET'])
+@app.route('/dict', methods=['GET'])
 def get_dictionary():
     """Endpoint para recuperar o conteúdo do dicionário."""
     try:
