@@ -89,13 +89,23 @@ function App() {
       </button>
       <div className="dictionary">
         <h2>Dicionário</h2>
-        <ul>
-          {dictionary.map((entry, index) => (
-            <li key={index}>
-              <strong>{entry.word}</strong>: {entry.count} ocorrências
-            </li>
-          ))}
-        </ul>
+        <table className="info-table">
+          <thead>
+            <tr>
+              <th>Palavra</th>
+              <th>Ocorrências</th>
+            </tr>
+          </thead>
+          <tbody>
+            {dictionary.map((entry) => (
+              <tr>
+                <td>{entry.word}</td>
+                <td>{entry.count}</td>
+              </tr>
+              )
+            )}
+          </tbody>
+        </table>
       </div>
     </>
   );

@@ -27,6 +27,7 @@
 .button {
   height: min-content;
 }
+
 .card {
   display: flex;
   justify-content: center;
@@ -48,3 +49,21 @@
   padding: 1rem;
   border: 0;
 }
+
+.info-table {
+  width: 95%;
+  margin: 0px auto 10px;
+  border-spacing: 0;
+  height: auto;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #fff;
+  padding: 8px;
+  width: 100%;
+  max-width: 100px;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
